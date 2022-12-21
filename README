@@ -1,0 +1,24 @@
+## PROJECT NAME: NATOURS - EXCITING TOURS FOR ADVENTUROUS PEOPLE
+## This project is build using sass compiler. where i am using scss syntex.
+## This project is made using 7-1 SASS Architecture
+
+
+
+## INSTALL NPM
+
+npm install
+
+# ALL THE REQUIRED NODE PACKAGES INSTALL AUTOMATICALLY AS IT WAS MENTION IN package.json
+
+# TO COMPILE SASS
+npm run compile:sass
+
+# INSTALL LIVE-SERVER
+npm install live-server
+
+# TO RUN LIVE SERVER 
+live-server
+
+
+
+

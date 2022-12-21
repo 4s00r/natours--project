@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // this define what 1 rem is
+  /* by default root font-size is 16px */
+  /* so to make calculation easy we set root font size to 10px */
+  /* rem unit is always relation to root font size */
+  font-size: 62.5%;
+  /* now 1rem =10px */ 
+
+
+
+
+ 
+  @include respond (tab-land){
+    font-size: 56.25%;   // 1 rem = 9px ,    width < 1200
+  }
+  @include respond (tab-port){
+    font-size: 50%;   // 1 rem = 8px ,    width < 900
+  }
+  
+  // @include respond (phone){
+  //   font-size: 30%;    // 1rem = 8px           width < 600
+  // }
+
+
+  @include respond (big-desktop){
+    font-size: 75%;       // 1rem = 12px     , 12/16=75%\ 
+  }
+
+
+
+}
+
+body {
+  box-sizing: border-box;
+  padding: 30px;
+
+  @include respond (tab-port){
+    padding: 0;
+  }
+
+
+}

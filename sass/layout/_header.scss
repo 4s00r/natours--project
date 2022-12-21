@@ -1,0 +1,51 @@
+.header {
+  /* height: 95% of view port */
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+
+  background-size: cover;
+  /* top will allwaysfix during responsive */
+  background-position: top;
+  /* clip-path: polygon(x y, 100% 0, 100% 90%, 0 100%); */
+  -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  @include respond (phone){
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    
+  }
+
+
+  &__logo-box {
+    /* we must have to set there parent element to relative 
+  for using absolute positioning */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__logo img:hover {
+    animation: moveInRight 1s ease-out;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* move element itself */
+    transform: translate(-50%, -50%);
+    /* center button */
+    text-align: center;
+  }
+}
